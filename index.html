@@ -3,132 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios de Redes Sociales</title>
+    <title>Potencia tus REDES SOCIALES</title>
     <style>
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes wave {
+            0%, 60%, 100% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(-10px);
+            }
+        }
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.5);
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 1000;
+            height: 100vh;
+            margin: 0;
         }
-        .venta {
-            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
-            border: 4px solid #ed7318; /* Marco más grueso y color naranja */
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .popup {
+            background-color: #fff;
             padding: 20px;
-            max-width: 600px; /* Ajuste del tamaño de la venta */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
             text-align: center;
             position: relative;
+            box-sizing: border-box;
         }
-        .venta-content {
-            position: relative;
-            z-index: 1;
+        h1 {
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
-        .venta p, .venta ul {
-            margin: 10px 0; /* Ajuste de margen para pegar más el texto al logo */
-            color: black; /* Texto en color negro */
-            font-size: 16px;
-            text-align: left; /* Alinear texto a la izquierda */
-        }
-        .header-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: black; /* Texto en color negro */
-            margin-top: 10px; /* Ajuste de margen superior */
-        }
-        .header-images {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
-        .header-images img {
-            width: 40%; /* Reducción del tamaño de la imagen en un 50% */
-            height: auto;
-        }
-        .botones {
+        .title {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
         }
-        .boton {
-            background-color: #003366; /* Color del botón de recargar (azul oscuro) */
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
+        .button {
+            display: inline-block;
+            padding: 15px;
+            margin: 10px;
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
-            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 5px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            width: calc(100% - 40px);
+            box-sizing: border-box;
         }
-        .boton-volver {
-            background-color: #ed7318; /* Color naranja */
+        .instagram {
+            background-color: #E1306C;
+            animation: pulse 2s infinite;
         }
-        .boton:hover {
-            background-color: #002244; /* Azul oscuro más oscuro */
+        .youtube {
+            background-color: #FF0000;
+            animation: pulse 2s infinite 2s;
         }
-        .boton-volver:hover {
-            background-color: #d66616; /* Color naranja oscuro */
+        .tiktok {
+            background-color: #000000;
+            animation: pulse 2s infinite 4s;
         }
-        .close-button {
+        .close-btn {
             position: absolute;
             top: 10px;
             right: 10px;
-            background-color: red;
-            color: white;
+            background-color: #ff5c5c;
             border: none;
-            border-radius: 50%;
-            width: 25px;
-            height: 25px;
-            cursor: pointer;
-            text-align: center;
-            line-height: 25px;
+            color: #fff;
             font-weight: bold;
-            z-index: 2;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .button span {
+            vertical-align: middle;
         }
     </style>
 </head>
-<body onload="openModal()">
-    <div class="overlay" id="overlay">
-        <div class="venta">
-            <button class="close-button" onclick="window.location.href='https://www.vendeygana.net/user/'">X</button>
-            <div class="venta-content">
-                <div class="header-images">
-                    <img src="https://get-picto.com/wp-content/uploads/2024/04/facebook-instagram-tiktok-logo.webp" alt="Redes Sociales">
-                </div>
-                <div class="header-title">📈 VENDE Y GANA te ofrece aumentar seguidores, likes y reproducciones en Facebook, TikTok e Instagram.</div>
-                <p>🌟 <strong>Importancia de estos servicios:</strong></p>
-                <ul>
-                    <li>• Mayor Visibilidad: Aumenta la presencia de tu perfil y alcance.</li>
-                    <li>• Credibilidad: Un mayor número de seguidores y likes mejora la percepción de tu marca.</li>
-                    <li>• Interacción: Incrementa la interacción y el compromiso con tu contenido.</li>
-                    <li>• Crecimiento: Impulsa el crecimiento orgánico de tu audiencia.</li>
-                </ul>
-                <p>Aprovecha nuestros servicios y mejora tu presencia en redes sociales hoy mismo.</p>
-                <div class="botones">
-                    <button class="boton" onclick="window.location.href='https://departamentodecuentas.company.site/products/otras-cuentas'">REALIZAR SOLICITUD Y VER PRECIOS</button>
-                    <button class="boton boton-volver" onclick="window.location.href='https://www.vendeygana.net/user/'">Volver a Vende y Gana</button>
-                </div>
-            </div>
+<body>
+    <div class="popup">
+        <button class="close-btn" onclick="window.location.href='https://www.vendeygana.net/user/'">X</button>
+        <div class="title">
+            <h1>Potencia tus</h1>
+            <h1>REDES SOCIALES</h1>
         </div>
+        <p>Tener seguidores y likes es crucial para aumentar la visibilidad y credibilidad en las redes sociales. Esto puede ayudarte a llegar a un público más amplio, mejorar la interacción y atraer más oportunidades.</p>
+        <a href="https://vendeygana2.github.io/SERVICIOSINSTA/" class="button instagram">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="icon">
+            <span>Instagram: Seguidores, Likes, Vistas</span>
+        </a>
+        <a href="https://vendeygana2.github.io/SERVICIOSYOUTU/" class="button youtube">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" class="icon">
+            <span>YouTube: Reproducciones, Likes, Seguidores</span>
+        </a>
+        <a href="https://vendeygana2.github.io/SERVICIOSTICTOC/" class="button tiktok">
+            <img src="https://th.bing.com/th/id/R.4a7633edac89b20e338d3575801b6840?rik=OAmZVBTn5abPXQ&pid=ImgRaw&r=0" alt="TikTok" class="icon">
+            <span>TikTok: Seguidores, Likes, Vistas</span>
+        </a>
     </div>
-
-    <script>
-        function openModal() {
-            document.getElementById('overlay').style.display = 'flex';
-        }
-    </script>
 </body>
 </html>
