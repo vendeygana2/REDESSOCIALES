@@ -3,126 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potencia tus REDES SOCIALES</title>
+    <title>Ventana Emergente</title>
     <style>
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
         }
-        @keyframes wave {
-            0%, 60%, 100% {
-                transform: translateY(0);
-            }
-            30% {
-                transform: translateY(-10px);
-            }
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: rgba(0, 0, 0, 0.5);
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000000; /* Fondo negro */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
         }
-        .popup {
-            background-color: #fff;
+        .popup-container {
+            background-color: #000000; /* Fondo negro para el contenido */
+            border: 5px solid #ed7318;
             padding: 20px;
-            border-radius: 10px;
+            box-sizing: border-box;
+            text-align: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 90%;
-            max-width: 400px;
-            text-align: center;
-            position: relative;
-            box-sizing: border-box;
+            max-width: 600px;
+            border-radius: 10px;
         }
         h1 {
-            color: #333;
+            color: #ffffff;
             margin: 0;
-            padding: 0;
         }
-        .title {
-            display: flex;
-            flex-direction: column;
+        p {
+            color: #ffffff;
+            font-size: 18px;
+            margin: 10px 0;
         }
-        .button {
+        .blink-text {
+            color: #ffffff;
+            font-size: 18px;
+            margin: 10px 0;
+            animation: blink 2s infinite;
+        }
+        .download-button {
             display: inline-block;
-            padding: 15px;
-            margin: 10px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
+            padding: 15px 25px;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #ed7318;
             text-decoration: none;
             border-radius: 5px;
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-            width: calc(100% - 40px);
-            box-sizing: border-box;
         }
-        .instagram {
-            background-color: #E1306C;
-            animation: pulse 2s infinite;
+        .logo, .footer-logo {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
         }
-        .youtube {
-            background-color: #FF0000;
-            animation: pulse 2s infinite 2s;
-        }
-        .tiktok {
-            background-color: #000000;
-            animation: pulse 2s infinite 4s;
-        }
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #ff5c5c;
-            border: none;
-            color: #fff;
-            font-weight: bold;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
-        .icon {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-            vertical-align: middle;
-        }
-        .button span {
-            vertical-align: middle;
+        @media (max-width: 600px) {
+            .popup-container {
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+                box-shadow: none;
+                max-width: none;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="popup">
-        <button class="close-btn" onclick="window.location.href='https://www.vendeygana.net/user/'">X</button>
-        <div class="title">
-            <h1>Potencia tus</h1>
-            <h1>REDES SOCIALES</h1>
-        </div>
-        <p>Tener seguidores y likes es crucial para aumentar la visibilidad y credibilidad en las redes sociales. Esto puede ayudarte a llegar a un público más amplio, mejorar la interacción y atraer más oportunidades.</p>
-        <a href="https://vendeygana2.github.io/SERVICIOSINSTA/" class="button instagram">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="icon">
-            <span>Instagram: Seguidores, Likes, Vistas</span>
-        </a>
-        <a href="https://vendeygana2.github.io/SERVICIOSYOUTU/" class="button youtube">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" class="icon">
-            <span>YouTube: Reproducciones, Likes, Seguidores</span>
-        </a>
-        <a href="https://vendeygana2.github.io/SERVICIOSTICTOC/" class="button tiktok">
-            <img src="https://th.bing.com/th/id/R.4a7633edac89b20e338d3575801b6840?rik=OAmZVBTn5abPXQ&pid=ImgRaw&r=0" alt="TikTok" class="icon">
-            <span>TikTok: Seguidores, Likes, Vistas</span>
-        </a>
+    <div class="popup-container">
+        <img src="https://www.vendeygana.net/assets/img/logo-1.png" alt="Logo" class="logo">
+        <h1>VENDE Y GANA SIEMPRE MEJORANDO PARA TI Y POR TI</h1>
+        <p>
+            en una alianza estratégica nos unimos para darte más con Panaxtreaming donde podrás hacer tus recargas con tu usuario Vende y Gana y además comprar cuentas y mucho más de forma más fácil y sencilla. ¡Te invitamos a descargar nuestra aplicación!
+        </p>
+        <p class="blink-text">EL PRODUCTO QUE BUSCAS AHORA ESTÁ AQUÍ</p>
+        <a href="https://app.jotform.com/250464329670661/page/33" class="download-button">Descarga de Aplicación</a>
+        <img src="https://dhgf5mcbrms62.cloudfront.net/110979006/header-fcHJMd/IVsTzWZ-600x600.webp" alt="Footer Logo" class="footer-logo">
     </div>
 </body>
 </html>
