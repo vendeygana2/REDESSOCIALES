@@ -16,9 +16,8 @@
         h1 {
             color: #333;
             margin: 20px 10px;
-            font-size: 28px; /* 15% más grande que 24px */
+            font-size: 28px;
         }
-        /* Botón de cierre */
         .close-button {
             position: absolute;
             top: 10px;
@@ -27,21 +26,20 @@
             color: white;
             border: none;
             border-radius: 50%;
-            font-size: 23px; /* Aumento proporcional */
-            width: 45px; /* Ajuste proporcional */
+            font-size: 23px;
+            width: 45px;
             height: 45px;
             cursor: pointer;
             text-align: center;
         }
-        /* Estilo de los botones */
         .button {
             display: inline-block;
             width: 60%;
             margin: 10px auto;
-            padding: 14px; /* Aumento del padding */
+            padding: 14px;
             border: none;
             border-radius: 8px;
-            font-size: 18px; /* 15% más grande que 16px */
+            font-size: 18px;
             color: white;
             cursor: pointer;
             text-decoration: none;
@@ -58,31 +56,18 @@
             background-color: #FF0000;
         }
         .button img {
-            width: 23px; /* Ajuste proporcional */
+            width: 23px;
             height: 23px;
             vertical-align: middle;
             margin-right: 8px;
         }
-        /* Ajustes responsivos para dispositivos pequeños */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 23px;
-                margin: 15px 10px;
-            }
-            .button {
-                width: 70%; /* Ajuste para pantallas pequeñas */
-                font-size: 16px;
-                padding: 12px;
-            }
-            .button img {
-                width: 20px;
-                height: 20px;
-            }
-            .close-button {
-                width: 40px;
-                height: 40px;
-                font-size: 20px;
-            }
+        /* Estilo para la imagen con tamaño reducido */
+        .responsive-image {
+            max-width: 60%; /* Se reduce el tamaño actual en un 40% */
+            height: auto; /* Mantiene la proporción */
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px; /* Opcional: esquinas redondeadas */
         }
     </style>
 </head>
@@ -109,5 +94,9 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo">
         YouTube: Seguidores, Likes y Reproducciones
     </a>
+    
+    <!-- Imagen redimensionada -->
+    <img src="https://routenote.com/blog/wp-content/uploads/2023/08/TikTok-IG-YT-Shorts.png" 
+         alt="Imagen de TikTok, Instagram y YouTube" class="responsive-image">
 </body>
 </html>
