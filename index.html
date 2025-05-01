@@ -3,100 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redes Sociales Likes, Seguidores, Reproducciones</title>
+    <title>Incrementa tu Presencia en Redes Sociales</title>
     <style>
-        /* Diseño global */
+        /* Diseño global moderno */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            background-color: #f0f0f0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             margin: 0;
-            padding: 0;
-        }
-        h1 {
+            padding: 20px;
+            min-height: 100vh;
             color: #333;
-            margin: 20px 10px;
-            font-size: 28px;
         }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin: 20px 10px 30px;
+            font-size: 32px;
+            font-weight: 700;
+            background: linear-gradient(to right, #E1306C, #FF0000, #000000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
         .close-button {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: red;
+            top: 15px;
+            right: 15px;
+            background-color: #e74c3c;
             color: white;
             border: none;
             border-radius: 50%;
-            font-size: 23px;
-            width: 45px;
-            height: 45px;
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
             cursor: pointer;
             text-align: center;
+            line-height: 40px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
+        
+        .close-button:hover {
+            background-color: #c0392b;
+            transform: scale(1.1);
+        }
+        
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
         .button {
-            display: inline-block;
-            width: 60%;
-            margin: 10px auto;
-            padding: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+            padding: 16px 20px;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 18px;
+            font-weight: 600;
             color: white;
             cursor: pointer;
             text-decoration: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
             text-align: center;
         }
+        
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
         .instagram {
-            background-color: #E1306C;
+            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
         }
+        
         .tiktok {
-            background-color: #000000;
+            background: linear-gradient(45deg, #000000, #25f4ee, #fe2c55);
         }
+        
         .youtube {
-            background-color: #FF0000;
+            background: linear-gradient(45deg, #ff0000, #e52d27);
         }
+        
         .button img {
-            width: 23px; /* Tamaño ajustado del logo */
-            height: 23px;
-            vertical-align: middle;
-            margin-right: 8px;
+            width: 28px;
+            height: 28px;
+            margin-right: 12px;
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
         }
-        /* Estilo para la imagen redimensionada */
+        
         .responsive-image {
-            max-width: 60%;
+            width: 100%;
+            max-width: 600px;
             height: auto;
             margin: 20px auto;
-            display: block;
-            border-radius: 8px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .responsive-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .benefits {
+            text-align: left;
+            margin: 25px 0;
+            padding: 0 15px;
+        }
+        
+        .benefits h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .benefits ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .benefits li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .benefits li:before {
+            content: "✓";
+            color: #27ae60;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <!-- Botón para cerrar la ventana -->
-    <button class="close-button" onclick="window.location.href='https://www.vendeygana.net/user/'">X</button>
+    <div class="container">
+        <!-- Botón para cerrar la ventana -->
+        <button class="close-button" onclick="window.location.href='https://www.vendeygana.net/user/'">X</button>
 
-    <h1>Redes Sociales Likes, Seguidores, Reproducciones</h1>
-    
-    <!-- Botón de Instagram -->
-    <a href="https://fluidforms.co/embed/form?id=67a4d869ac5308ab4c142d72" class="button instagram">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
-        Instagram: Seguidores, Likes y Vistas
-    </a>
-    
-    <!-- Botón de TikTok con el nuevo logo -->
-    <a href="https://fluidforms.co/embed/form?id=67a50d7457addcf0c3af141c" class="button tiktok">
-        <img src="https://static.vecteezy.com/system/resources/previews/021/495/942/non_2x/tiktok-logo-icon-free-png.png" alt="TikTok Logo">
-        TikTok: Seguidores, Likes y Vistas
-    </a>
-    
-    <!-- Botón de YouTube -->
-    <a href="https://fluidforms.co/embed/form?id=67a510a27dccdebd244090cf" class="button youtube">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo">
-        YouTube: Seguidores, Likes y Reproducciones
-    </a>
-    
-    <!-- Imagen redimensionada -->
-    <img src="https://routenote.com/blog/wp-content/uploads/2023/08/TikTok-IG-YT-Shorts.png" 
-         alt="Imagen de TikTok, Instagram y YouTube" class="responsive-image">
+        <h1>Impulsa tu Presencia en Redes Sociales</h1>
+        <p class="subtitle">Aumenta seguidores, likes y reproducciones de forma rápida y segura</p>
+        
+        <div class="button-container">
+            <!-- Botón de Instagram con nuevo formulario -->
+            <a href="https://online.forms.app/respuestasdereportesdefa/formulario-sin-titulo-5" class="button instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+                Instagram: Seguidores, Likes y Vistas
+            </a>
+            
+            <!-- Botón de TikTok -->
+            <a href="https://fluidforms.co/embed/form?id=67a50d7457addcf0c3af141c" class="button tiktok">
+                <img src="https://static.vecteezy.com/system/resources/previews/021/495/942/non_2x/tiktok-logo-icon-free-png.png" alt="TikTok Logo">
+                TikTok: Seguidores, Likes y Vistas
+            </a>
+            
+            <!-- Botón de YouTube -->
+            <a href="https://fluidforms.co/embed/form?id=67a510a27dccdebd244090cf" class="button youtube">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo">
+                YouTube: Seguidores, Likes y Reproducciones
+            </a>
+        </div>
+        
+        <div class="benefits">
+            <h3>Beneficios de aumentar tu presencia en redes:</h3>
+            <ul>
+                <li>Mayor visibilidad para tu marca o perfil personal</li>
+                <li>Incrementa tu credibilidad y autoridad</li>
+                <li>Atrae más oportunidades de colaboración</li>
+                <li>Mejora el engagement con tu audiencia</li>
+                <li>Rápido y seguro, sin riesgos para tu cuenta</li>
+            </ul>
+        </div>
+        
+        <!-- Imagen redimensionada -->
+        <img src="https://routenote.com/blog/wp-content/uploads/2023/08/TikTok-IG-YT-Shorts.png" 
+             alt="Redes Sociales: TikTok, Instagram y YouTube" class="responsive-image">
+    </div>
 </body>
 </html>
