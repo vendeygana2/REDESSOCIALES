@@ -165,6 +165,60 @@
             left: 0;
             font-weight: bold;
         }
+
+        /* Estilos para los modales */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            height: 90vh;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        .modal-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -177,28 +231,28 @@
         
         <div class="button-container">
             <!-- Botón de Instagram -->
-            <a href="https://online.forms.app/respuestasdereportesdefa/formulario-sin-titulo-5" class="button instagram">
+            <button id="instagramBtn" class="button instagram">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
                 Instagram: Seguidores, Likes y Vistas
-            </a>
+            </button>
             
-            <!-- Botón de TikTok con nuevo formulario -->
-            <a href="https://online.forms.app/respuestasdereportesdefa/tiktok" class="button tiktok">
+            <!-- Botón de TikTok -->
+            <button id="tiktokBtn" class="button tiktok">
                 <img src="https://static.vecteezy.com/system/resources/previews/021/495/942/non_2x/tiktok-logo-icon-free-png.png" alt="TikTok Logo">
                 TikTok: Seguidores, Likes y Vistas
-            </a>
+            </button>
             
             <!-- Botón de YouTube -->
-            <a href="https://fluidforms.co/embed/form?id=67a510a27dccdebd244090cf" class="button youtube">
+            <button id="youtubeBtn" class="button youtube">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo">
                 YouTube: Seguidores, Likes y Reproducciones
-            </a>
+            </button>
             
             <!-- Botón para Recargas de Monedas TikTok -->
-            <a href="#" class="button coins">
+            <button id="coinsBtn" class="button coins">
                 <img src="https://cdn-icons-png.flaticon.com/512/2503/2503479.png" alt="Monedas Logo">
                 RECARGAS MONEDAS TIKTOK GLOBAL
-            </a>
+            </button>
         </div>
         
         <div class="benefits">
@@ -217,5 +271,117 @@
         <img src="https://routenote.com/blog/wp-content/uploads/2023/08/TikTok-IG-YT-Shorts.png" 
              alt="Redes Sociales: TikTok, Instagram y YouTube" class="responsive-image">
     </div>
+
+    <!-- Modal para Instagram -->
+    <div id="instagramModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeInstagramModal">×</span>
+            <iframe src="https://online.forms.app/respuestasdereportesdefa/formulario-sin-titulo-5" class="modal-iframe" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- Modal para TikTok -->
+    <div id="tiktokModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeTiktokModal">×</span>
+            <iframe src="https://online.forms.app/respuestasdereportesdefa/tiktok" class="modal-iframe" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- Modal para YouTube -->
+    <div id="youtubeModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeYoutubeModal">×</span>
+            <iframe src="https://fluidforms.co/embed/form?id=67a510a27dccdebd244090cf" class="modal-iframe" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- Modal para Monedas TikTok -->
+    <div id="coinsModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeCoinsModal">×</span>
+            <iframe src="#" class="modal-iframe" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Obtener elementos del DOM
+        const instagramBtn = document.getElementById("instagramBtn");
+        const tiktokBtn = document.getElementById("tiktokBtn");
+        const youtubeBtn = document.getElementById("youtubeBtn");
+        const coinsBtn = document.getElementById("coinsBtn");
+
+        const instagramModal = document.getElementById("instagramModal");
+        const tiktokModal = document.getElementById("tiktokModal");
+        const youtubeModal = document.getElementById("youtubeModal");
+        const coinsModal = document.getElementById("coinsModal");
+
+        const closeInstagramModal = document.getElementById("closeInstagramModal");
+        const closeTiktokModal = document.getElementById("closeTiktokModal");
+        const closeYoutubeModal = document.getElementById("closeYoutubeModal");
+        const closeCoinsModal = document.getElementById("closeCoinsModal");
+
+        // Event listeners para abrir modales
+        instagramBtn.addEventListener("click", () => {
+            instagramModal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        });
+
+        tiktokBtn.addEventListener("click", () => {
+            tiktokModal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        });
+
+        youtubeBtn.addEventListener("click", () => {
+            youtubeModal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        });
+
+        coinsBtn.addEventListener("click", () => {
+            coinsModal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        });
+
+        // Event listeners para cerrar modales
+        closeInstagramModal.addEventListener("click", () => {
+            instagramModal.style.display = "none";
+            document.body.style.overflow = "auto";
+        });
+
+        closeTiktokModal.addEventListener("click", () => {
+            tiktokModal.style.display = "none";
+            document.body.style.overflow = "auto";
+        });
+
+        closeYoutubeModal.addEventListener("click", () => {
+            youtubeModal.style.display = "none";
+            document.body.style.overflow = "auto";
+        });
+
+        closeCoinsModal.addEventListener("click", () => {
+            coinsModal.style.display = "none";
+            document.body.style.overflow = "auto";
+        });
+
+        // Cerrar modal al hacer clic fuera del contenido
+        window.addEventListener("click", (event) => {
+            if (event.target === instagramModal) {
+                instagramModal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+            if (event.target === tiktokModal) {
+                tiktokModal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+            if (event.target === youtubeModal) {
+                youtubeModal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+            if (event.target === coinsModal) {
+                coinsModal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        });
+    </script>
 </body>
 </html>
