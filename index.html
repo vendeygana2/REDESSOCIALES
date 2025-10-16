@@ -3,384 +3,684 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incrementa tu Presencia en Redes Sociales</title>
+    <title>Servicios de Redes Sociales</title>
     <style>
-        /* Diseño global moderno */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            margin: 0;
-            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             min-height: 100vh;
-            color: #333;
+            background: linear-gradient(135deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            padding: 15px;
+            overflow-x: hidden;
         }
         
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 90%;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 25px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             position: relative;
+            z-index: 1;
+            margin: 10px auto;
         }
         
         h1 {
-            color: #2c3e50;
-            margin: 20px 10px 30px;
-            font-size: 32px;
-            font-weight: 700;
-            background: linear-gradient(to right, #E1306C, #FF0000, #000000);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
+            color: #333;
+            margin-bottom: 15px;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            line-height: 1.3;
+            word-wrap: break-word;
         }
         
-        .subtitle {
-            color: #7f8c8d;
-            margin-bottom: 30px;
-            font-size: 16px;
-        }
-        
-        .close-button {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 20px;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            text-align: center;
-            line-height: 40px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        
-        .close-button:hover {
-            background-color: #c0392b;
-            transform: scale(1.1);
+        p {
+            color: #555;
+            margin-bottom: 25px;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            line-height: 1.5;
+            word-wrap: break-word;
         }
         
         .button-container {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-        
-        .button {
-            display: flex;
-            align-items: center;
             justify-content: center;
-            width: 100%;
-            margin: 0 auto;
-            padding: 16px 20px;
-            border: none;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: 600;
-            color: white;
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        
-        .button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .instagram {
-            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
-        }
-        
-        .tiktok {
-            background: linear-gradient(45deg, #000000, #25f4ee, #fe2c55);
-        }
-        
-        .youtube {
-            background: linear-gradient(45deg, #ff0000, #e52d27);
-        }
-        
-        .coins {
-            background: linear-gradient(45deg, #00b4ff, #0066ff);
-        }
-        
-        .button img {
-            width: 28px;
-            height: 28px;
-            margin-right: 12px;
-            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
-        }
-        
-        .responsive-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            margin: 20px auto;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .responsive-image:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        
-        .benefits {
-            text-align: left;
             margin: 25px 0;
-            padding: 0 15px;
-        }
-        
-        .benefits h3 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        
-        .benefits ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .benefits li {
-            padding: 8px 0;
             position: relative;
-            padding-left: 25px;
         }
         
-        .benefits li:before {
-            content: "✓";
-            color: #27ae60;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
+        .custom-button {
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            max-width: 95%;
+            position: relative;
         }
-
-        /* Estilos para los modales */
-        .modal {
-            display: none;
+        
+        .custom-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .custom-button:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .button-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: min(400px, 90vw);
+            border-radius: 10px;
+        }
+        
+        .info-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #405de6;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 0 8px 8px 0;
+            text-align: left;
+            word-wrap: break-word;
+        }
+        
+        .info-box h3 {
+            color: #405de6;
+            margin-bottom: 10px;
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+        }
+        
+        .typewriter-container {
+            position: relative;
+            min-height: 60px;
+        }
+        
+        .typewriter-text {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            line-height: 1.5;
+            font-size: clamp(0.85rem, 2.5vw, 1rem);
+        }
+        
+        .typewriter-cursor {
+            display: inline-block;
+            width: 2px;
+            background-color: #405de6;
+            animation: blink 1s infinite;
+            margin-left: 2px;
+        }
+        
+        /* Efectos de entretenimiento */
+        .entertainment-element {
+            position: absolute;
+            font-size: clamp(16px, 4vw, 20px);
+            opacity: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .element-1 { color: #405de6; }
+        .element-2 { color: #5851db; }
+        .element-3 { color: #833ab4; }
+        .element-4 { color: #c13584; }
+        .element-5 { color: #e1306c; }
+        .element-6 { color: #fd1d1d; }
+        
+        @keyframes float-element {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-80px) rotate(360deg) scale(1.3);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes blink {
+            0%, 50% {
+                opacity: 1;
+            }
+            51%, 100% {
+                opacity: 0;
+            }
+        }
+        
+        /* Modal de horario de atención */
+        .modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            position: relative;
-            width: 90%;
-            max-width: 800px;
-            height: 90vh;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            background: rgba(0, 0, 0, 0.5);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.7);
             display: flex;
             justify-content: center;
             align-items: center;
-            cursor: pointer;
-            z-index: 1001;
-            transition: all 0.3s ease;
+            z-index: 1000;
+            padding: 15px;
+            overflow-y: auto;
         }
-
-        .modal-close:hover {
-            background: rgba(0, 0, 0, 0.8);
-            transform: scale(1.1);
-        }
-
-        .modal-iframe {
+        
+        .modal-content {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            max-width: 95%;
             width: 100%;
-            height: 100%;
+            max-height: 95vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .modal-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin: 0 auto 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .modal-title {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+        }
+        
+        .modal-message {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            text-align: left;
+        }
+        
+        .modal-horario {
+            background-color: #f8f9fa;
+            border-left: 4px solid #405de6;
+            padding: 12px;
+            margin-top: 20px;
+            border-radius: 0 8px 8px 0;
+            text-align: left;
+        }
+        
+        .modal-horario h4 {
+            color: #405de6;
+            margin-bottom: 8px;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+        }
+        
+        .social-section {
+            background-color: #f0f8ff;
+            border-left: 4px solid #833ab4;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 8px 8px 0;
+            text-align: left;
+        }
+        
+        .social-section h4 {
+            color: #833ab4;
+            margin-bottom: 10px;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+        }
+        
+        .social-section p {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .social-list {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .social-list li {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .telegram-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .telegram-button {
+            padding: 12px 20px;
             border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .telegram-button.telegram {
+            background-color: #0088cc;
+            color: white;
+        }
+        
+        .telegram-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .modal-button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background-color: #405de6;
+            color: white;
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+        
+        .modal-button:hover {
+            background-color: #3448c5;
+            transform: translateY(-2px);
+        }
+        
+        /* Media queries específicas para diferentes tamaños */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 95%;
+                padding: 20px 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                min-height: 100vh;
+                align-items: flex-start;
+            }
+            
+            .container {
+                max-width: 98%;
+                padding: 20px 15px;
+                margin: 5px auto;
+            }
+            
+            .button-image {
+                max-width: 95%;
+            }
+            
+            .info-box {
+                padding: 12px;
+                margin-top: 20px;
+            }
+            
+            .modal-content {
+                padding: 20px;
+                max-width: 98%;
+                max-height: 98vh;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 8px;
+            }
+            
+            .container {
+                padding: 15px 10px;
+                border-radius: 15px;
+            }
+            
+            h1 {
+                margin-bottom: 12px;
+            }
+            
+            p {
+                margin-bottom: 20px;
+            }
+            
+            .button-container {
+                margin: 20px 0;
+            }
+            
+            .custom-button {
+                max-width: 98%;
+            }
+            
+            .typewriter-container {
+                min-height: 50px;
+            }
+            
+            .modal-content {
+                padding: 15px;
+            }
+            
+            .modal-title {
+                font-size: 1.3rem;
+            }
+            
+            .telegram-buttons {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 320px) {
+            .container {
+                padding: 12px 8px;
+            }
+            
+            h1 {
+                font-size: 1.3rem;
+            }
+            
+            p {
+                font-size: 0.85rem;
+            }
+            
+            .info-box h3 {
+                font-size: 1rem;
+            }
+            
+            .typewriter-text {
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Para pantallas muy altas */
+        @media (min-height: 1000px) {
+            body {
+                padding: 30px 15px;
+            }
+            
+            .container {
+                max-width: 800px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Botón para cerrar la ventana -->
-        <button class="close-button" onclick="window.location.href='https://www.vendeygana.net/user/'">X</button>
-
-        <h1>Impulsa tu Presencia en Redes Sociales</h1>
-        <p class="subtitle">Aumenta seguidores, likes, reproducciones y monedas de forma rápida y segura</p>
+        <h1>Servicios de Redes Sociales</h1>
+        <p>Vende a tus clientes seguidores, likes, visualizaciones de REDES SOCIALES como INSTAGRAM, TIKTOK de forma fácil</p>
         
         <div class="button-container">
-            <!-- Botón de Instagram -->
-            <button id="instagramBtn" class="button instagram">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
-                Instagram: Seguidores, Likes y Vistas
-            </button>
-            
-            <!-- Botón de TikTok -->
-            <button id="tiktokBtn" class="button tiktok">
-                <img src="https://static.vecteezy.com/system/resources/previews/021/495/942/non_2x/tiktok-logo-icon-free-png.png" alt="TikTok Logo">
-                TikTok: Seguidores, Likes y Vistas
-            </button>
-            
-            <!-- Botón de YouTube -->
-            <button id="youtubeBtn" class="button youtube">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo">
-                YouTube: Seguidores, Likes y Reproducciones
-            </button>
-            
-            <!-- Botón para Recargas de Monedas TikTok -->
-            <button id="coinsBtn" class="button coins">
-                <img src="https://cdn-icons-png.flaticon.com/512/2503/2503479.png" alt="Monedas Logo">
-                RECARGAS MONEDAS TIKTOK GLOBAL
-            </button>
+            <a href="https://vendeyganaservicios.company.site/products/sample-blue-denim-long-skirt" target="_blank" class="custom-button" id="entertainment-button">
+                <img src="https://i.pinimg.com/736x/0c/f4/4b/0cf44bbe72c04fe7567daefa9d4393f6.jpg" 
+                     alt="Servicios de Redes Sociales" 
+                     class="button-image">
+            </a>
         </div>
         
-        <div class="benefits">
-            <h3>Beneficios de nuestros servicios:</h3>
-            <ul>
-                <li>Mayor visibilidad para tu marca o perfil personal</li>
-                <li>Incrementa tu credibilidad y autoridad</li>
-                <li>Atrae más oportunidades de colaboración</li>
-                <li>Mejora el engagement con tu audiencia</li>
-                <li>Recargas rápidas y seguras de monedas TikTok</li>
-                <li>Soporte técnico disponible 24/7</li>
-            </ul>
-        </div>
-        
-        <!-- Imagen redimensionada -->
-        <img src="https://routenote.com/blog/wp-content/uploads/2023/08/TikTok-IG-YT-Shorts.png" 
-             alt="Redes Sociales: TikTok, Instagram y YouTube" class="responsive-image">
-    </div>
-
-    <!-- Modal para Instagram -->
-    <div id="instagramModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" id="closeInstagramModal">×</span>
-            <iframe src="https://online.forms.app/respuestasdereportesdefa/formulario-sin-titulo-5" class="modal-iframe" frameborder="0"></iframe>
+        <div class="info-box">
+            <h3>¿Cómo funciona?</h3>
+            <div class="typewriter-container" id="typewriter-container">
+                <!-- El texto se generará dinámicamente con JavaScript -->
+            </div>
         </div>
     </div>
 
-    <!-- Modal para TikTok -->
-    <div id="tiktokModal" class="modal">
+    <!-- Modal de horario de atención -->
+    <div id="horario-modal" class="modal-overlay" style="display: none;">
         <div class="modal-content">
-            <span class="modal-close" id="closeTiktokModal">×</span>
-            <iframe src="https://online.forms.app/respuestasdereportesdefa/tiktok" class="modal-iframe" frameborder="0"></iframe>
+            <img src="https://i.pinimg.com/736x/0c/f4/4b/0cf44bbe72c04fe7567daefa9d4393f6.jpg" 
+                 alt="Servicios de Redes Sociales" 
+                 class="modal-image">
+            <h2 class="modal-title">Servicios de Redes Sociales</h2>
+            
+            <div class="social-section">
+                <h4>Instagram</h4>
+                <p>Aumenta tu presencia en Instagram con nuestros servicios:</p>
+                <ul class="social-list">
+                    <li>Seguidores reales y activos</li>
+                    <li>Likes en publicaciones</li>
+                    <li>Comentarios auténticos</li>
+                    <li>Visualizaciones de Stories y Reels</li>
+                    <li>Aumento de engagement orgánico</li>
+                </ul>
+            </div>
+            
+            <div class="social-section">
+                <h4>TikTok</h4>
+                <p>Impulsa tu contenido en TikTok con nuestros servicios:</p>
+                <ul class="social-list">
+                    <li>Seguidores activos</li>
+                    <li>Likes en videos</li>
+                    <li>Compartidos y guardados</li>
+                    <li>Visualizaciones de videos</li>
+                    <li>Comentarios reales</li>
+                </ul>
+            </div>
+            
+            <div class="social-section">
+                <h4>Otras Plataformas</h4>
+                <p>También ofrecemos servicios para otras redes sociales:</p>
+                <ul class="social-list">
+                    <li><strong>Facebook:</strong> Likes, seguidores y reacciones</li>
+                    <li><strong>Twitter:</strong> Seguidores y retweets</li>
+                    <li><strong>YouTube:</strong> Suscriptores y likes</li>
+                    <li><strong>Twitch:</strong> Seguidores y viewers</li>
+                </ul>
+            </div>
+            
+            <div class="modal-horario">
+                <h4>Nuestro horario de atención:</h4>
+                <p>Lunes a Sábado: 8:30 AM a 9:00 PM</p>
+                <p>Domingos: 10:00 AM a 7:00 PM</p>
+            </div>
+            
+            <div class="telegram-buttons">
+                <a href="https://t.me/panaxvendeygana_bot" target="_blank" class="telegram-button telegram">
+                    <span>📱</span> Ir al canal de Telegram
+                </a>
+            </div>
+            
+            <button id="modal-entendido" class="modal-button">ENTENDIDO</button>
         </div>
     </div>
 
-    <!-- Modal para YouTube -->
-    <div id="youtubeModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" id="closeYoutubeModal">×</span>
-            <iframe src="https://fluidforms.co/embed/form?id=67a510a27dccdebd244090cf" class="modal-iframe" frameborder="0"></iframe>
-        </div>
-    </div>
-
-    <!-- Modal para Monedas TikTok -->
-    <div id="coinsModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" id="closeCoinsModal">×</span>
-            <iframe src="#" class="modal-iframe" frameborder="0"></iframe>
-        </div>
-    </div>
+    <!-- Audio para el efecto de sonido -->
+    <audio id="entertainment-sound" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3" type="audio/mpeg">
+    </audio>
 
     <script>
-        // Obtener elementos del DOM
-        const instagramBtn = document.getElementById("instagramBtn");
-        const tiktokBtn = document.getElementById("tiktokBtn");
-        const youtubeBtn = document.getElementById("youtubeBtn");
-        const coinsBtn = document.getElementById("coinsBtn");
-
-        const instagramModal = document.getElementById("instagramModal");
-        const tiktokModal = document.getElementById("tiktokModal");
-        const youtubeModal = document.getElementById("youtubeModal");
-        const coinsModal = document.getElementById("coinsModal");
-
-        const closeInstagramModal = document.getElementById("closeInstagramModal");
-        const closeTiktokModal = document.getElementById("closeTiktokModal");
-        const closeYoutubeModal = document.getElementById("closeYoutubeModal");
-        const closeCoinsModal = document.getElementById("closeCoinsModal");
-
-        // Event listeners para abrir modales
-        instagramBtn.addEventListener("click", () => {
-            instagramModal.style.display = "flex";
-            document.body.style.overflow = "hidden";
-        });
-
-        tiktokBtn.addEventListener("click", () => {
-            tiktokModal.style.display = "flex";
-            document.body.style.overflow = "hidden";
-        });
-
-        youtubeBtn.addEventListener("click", () => {
-            youtubeModal.style.display = "flex";
-            document.body.style.overflow = "hidden";
-        });
-
-        coinsBtn.addEventListener("click", () => {
-            coinsModal.style.display = "flex";
-            document.body.style.overflow = "hidden";
-        });
-
-        // Event listeners para cerrar modales
-        closeInstagramModal.addEventListener("click", () => {
-            instagramModal.style.display = "none";
-            document.body.style.overflow = "auto";
-        });
-
-        closeTiktokModal.addEventListener("click", () => {
-            tiktokModal.style.display = "none";
-            document.body.style.overflow = "auto";
-        });
-
-        closeYoutubeModal.addEventListener("click", () => {
-            youtubeModal.style.display = "none";
-            document.body.style.overflow = "auto";
-        });
-
-        closeCoinsModal.addEventListener("click", () => {
-            coinsModal.style.display = "none";
-            document.body.style.overflow = "auto";
-        });
-
-        // Cerrar modal al hacer clic fuera del contenido
-        window.addEventListener("click", (event) => {
-            if (event.target === instagramModal) {
-                instagramModal.style.display = "none";
-                document.body.style.overflow = "auto";
+        document.addEventListener('DOMContentLoaded', function() {
+            const text = "Selecciona el servicio de redes sociales que necesitas, elige el paquete deseado (seguidores, likes, visualizaciones), realiza el pago de forma segura y recibirás el servicio en tu cuenta en minutos. Proceso rápido, seguro y con resultados garantizados.";
+            const container = document.getElementById('typewriter-container');
+            const entertainmentButton = document.getElementById('entertainment-button');
+            const entertainmentSound = document.getElementById('entertainment-sound');
+            const horarioModal = document.getElementById('horario-modal');
+            const modalEntendido = document.getElementById('modal-entendido');
+            const speed = 50; // Velocidad de escritura en milisegundos
+            
+            // Símbolos de redes sociales
+            const socialElements = ['📱', '📸', '🎥', '❤️', '👥', '🔥', '🚀', '💫'];
+            
+            // Variable para controlar si el usuario ya vio el modal
+            let modalVisto = false;
+            
+            // Función para verificar si estamos fuera del horario de atención
+            function estaFueraDeHorario() {
+                const ahora = new Date();
+                const dia = ahora.getDay(); // 0 = Domingo, 1 = Lunes, ..., 6 = Sábado
+                const hora = ahora.getHours();
+                const minutos = ahora.getMinutes();
+                const horaActual = hora + minutos / 100;
+                
+                // Lunes a Sábado: después de las 9 PM (21:00) y hasta las 8:30 AM (8.5)
+                if (dia >= 1 && dia <= 6) {
+                    if (horaActual >= 21 || horaActual < 8.5) {
+                        return true;
+                    }
+                }
+                // Domingo: después de las 7 PM (19:00) y hasta las 10 AM (10.0)
+                else if (dia === 0) {
+                    if (horaActual >= 19 || horaActual < 10) {
+                        return true;
+                    }
+                }
+                
+                return false;
             }
-            if (event.target === tiktokModal) {
-                tiktokModal.style.display = "none";
-                document.body.style.overflow = "auto";
+            
+            // Mostrar modal si estamos fuera de horario y el usuario no lo ha visto aún
+            if (estaFueraDeHorario() && !modalVisto) {
+                horarioModal.style.display = 'flex';
             }
-            if (event.target === youtubeModal) {
-                youtubeModal.style.display = "none";
-                document.body.style.overflow = "auto";
+            
+            // Evento para el botón ENTENDIDO del modal
+            modalEntendido.addEventListener('click', function() {
+                horarioModal.style.display = 'none';
+                modalVisto = true;
+            });
+            
+            // Cerrar modal al hacer clic fuera del contenido
+            horarioModal.addEventListener('click', function(e) {
+                if (e.target === horarioModal) {
+                    horarioModal.style.display = 'none';
+                    modalVisto = true;
+                }
+            });
+            
+            function typeWriter() {
+                container.innerHTML = ''; // Limpiar contenedor
+                let i = 0;
+                
+                function type() {
+                    if (i < text.length) {
+                        // Crear un span para el texto ya escrito
+                        const typedSpan = document.createElement('span');
+                        typedSpan.className = 'typewriter-text';
+                        typedSpan.textContent = text.substring(0, i + 1);
+                        
+                        // Crear cursor
+                        const cursorSpan = document.createElement('span');
+                        cursorSpan.className = 'typewriter-cursor';
+                        
+                        // Actualizar contenido
+                        container.innerHTML = '';
+                        container.appendChild(typedSpan);
+                        container.appendChild(cursorSpan);
+                        
+                        i++;
+                        setTimeout(type, speed);
+                    } else {
+                        // Cuando termine, mostrar solo el texto sin cursor
+                        const finalText = document.createElement('span');
+                        finalText.className = 'typewriter-text';
+                        finalText.textContent = text;
+                        container.innerHTML = '';
+                        container.appendChild(finalText);
+                    }
+                }
+                
+                type();
             }
-            if (event.target === coinsModal) {
-                coinsModal.style.display = "none";
-                document.body.style.overflow = "auto";
+            
+            // Función para crear elementos de entretenimiento
+            function createEntertainmentElements() {
+                for (let i = 0; i < 12; i++) {
+                    setTimeout(() => {
+                        const element = document.createElement('div');
+                        element.className = `entertainment-element element-${(i % 6) + 1}`;
+                        element.textContent = socialElements[i % socialElements.length];
+                        
+                        // Posición aleatoria alrededor del botón
+                        const buttonRect = entertainmentButton.getBoundingClientRect();
+                        const randomX = Math.random() * buttonRect.width;
+                        
+                        element.style.left = `${buttonRect.left + randomX}px`;
+                        element.style.top = `${buttonRect.bottom}px`;
+                        
+                        document.body.appendChild(element);
+                        
+                        // Animación del elemento
+                        element.style.animation = `float-element 1.8s ease-out forwards`;
+                        
+                        // Eliminar el elemento después de la animación
+                        setTimeout(() => {
+                            if (element.parentNode) {
+                                element.parentNode.removeChild(element);
+                            }
+                        }, 1800);
+                    }, i * 100);
+                }
             }
+            
+            // Evento para el botón de entretenimiento
+            entertainmentButton.addEventListener('click', function(e) {
+                // Si estamos fuera de horario y el usuario no ha visto el modal, mostrarlo y prevenir la acción por defecto
+                if (estaFueraDeHorario() && !modalVisto) {
+                    e.preventDefault();
+                    horarioModal.style.display = 'flex';
+                    return;
+                }
+                
+                // Reproducir sonido
+                entertainmentSound.currentTime = 0;
+                entertainmentSound.play().catch(error => {
+                    console.log('La reproducción automática de audio fue prevenida:', error);
+                });
+                
+                // Crear elementos de entretenimiento
+                createEntertainmentElements();
+                
+                // Efecto de pulsación
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+            
+            // Efecto de elementos al pasar el mouse
+            entertainmentButton.addEventListener('mouseenter', function() {
+                createEntertainmentElements();
+            });
+            
+            // Ajustar el contenedor en dispositivos móviles
+            function adjustLayout() {
+                const isMobile = window.innerWidth <= 768;
+                if (isMobile) {
+                    document.body.style.alignItems = 'flex-start';
+                    document.body.style.paddingTop = '20px';
+                } else {
+                    document.body.style.alignItems = 'center';
+                    document.body.style.paddingTop = '15px';
+                }
+            }
+            
+            // Ajustar layout al cargar y al redimensionar
+            adjustLayout();
+            window.addEventListener('resize', adjustLayout);
+            
+            // Iniciar efecto máquina de escribir
+            typeWriter();
         });
     </script>
 </body>
